@@ -27,7 +27,7 @@ namespace ConsoleApp
             contaCorrente1.conta = "10123-4";
             contaCorrente1.numeroAgencia = 0440;
             contaCorrente1.nomeAgencia = "Agencia Central";
-            contaCorrente1.saldo = 19.94;
+            contaCorrente1.saldo = 3219.94;
             contaCorrente1.ativo = true;
 
             ContaCorrente contaCorrente2 = new ContaCorrente();
@@ -36,13 +36,23 @@ namespace ConsoleApp
             contaCorrente2.conta = "23132-2";
             contaCorrente2.numeroAgencia = 2123;
             contaCorrente2.nomeAgencia = "Agencia Leste";
+            contaCorrente2.saldo = 3999.00;
             contaCorrente2.ativo = false;
+
+            ContaCorrente contaCorrente3 = new ContaCorrente();
+
+            contaCorrente3.titular = "Elisangela Garcia de Farias";
+            contaCorrente3.conta = "23132-2";
+            contaCorrente3.numeroAgencia = 2123;
+            contaCorrente3.nomeAgencia = "Agencia Leste";
+            contaCorrente3.saldo = 3999.00;
+            contaCorrente3.ativo = false;
 
 
             ///Alterando a referência da contaCorrente1 para contaCorrente 2
-            contaCorrente1 = contaCorrente2;
+            contaCorrente2 = contaCorrente1;
 
-            contaCorrente2.conta = "3333";
+            contaCorrente1.conta = "3333";
 
 
             Console.WriteLine("Titular: " + contaCorrente1.titular);
@@ -50,6 +60,29 @@ namespace ConsoleApp
             Console.WriteLine("Número Agencia: " + contaCorrente1.numeroAgencia);
             Console.WriteLine("Nome Agencia: " + contaCorrente1.nomeAgencia);
             Console.WriteLine("Saldo: " + contaCorrente1.saldo);
+
+            contaCorrente1.Sacar(100);
+
+            Console.WriteLine("Saldo Conta 1: " + contaCorrente1.saldo);
+
+            contaCorrente1.Depositar(200);
+
+            Console.WriteLine("Saldo Conta 1: " + contaCorrente1.saldo);
+
+            Console.WriteLine("Saldo Conta 3: " + contaCorrente3.saldo);
+
+            contaCorrente1.Transferir(200, contaCorrente3);
+
+            Console.WriteLine("Transferindo 200 de 1 para 3");
+
+            Console.WriteLine("Saldo Conta 1: " + contaCorrente1.saldo);
+
+            Console.WriteLine("Saldo Conta 3: " + contaCorrente3.saldo);
+
+
+
+
+
 
             Console.ReadKey();
 
