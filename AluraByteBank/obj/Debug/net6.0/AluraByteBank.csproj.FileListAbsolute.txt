@@ -1,0 +1,15 @@
+D:\MatheusProjects\cursos\AluraByteBank\AluraByteBank\bin\Debug\net6.0\AluraByteBank.exe
+D:\MatheusProjects\cursos\AluraByteBank\AluraByteBank\bin\Debug\net6.0\AluraByteBank.deps.json
+D:\MatheusProjects\cursos\AluraByteBank\AluraByteBank\bin\Debug\net6.0\AluraByteBank.runtimeconfig.json
+D:\MatheusProjects\cursos\AluraByteBank\AluraByteBank\bin\Debug\net6.0\AluraByteBank.dll
+D:\MatheusProjects\cursos\AluraByteBank\AluraByteBank\bin\Debug\net6.0\AluraByteBank.pdb
+D:\MatheusProjects\cursos\AluraByteBank\AluraByteBank\obj\Debug\net6.0\AluraByteBank.csproj.AssemblyReference.cache
+D:\MatheusProjects\cursos\AluraByteBank\AluraByteBank\obj\Debug\net6.0\AluraByteBank.GeneratedMSBuildEditorConfig.editorconfig
+D:\MatheusProjects\cursos\AluraByteBank\AluraByteBank\obj\Debug\net6.0\AluraByteBank.AssemblyInfoInputs.cache
+D:\MatheusProjects\cursos\AluraByteBank\AluraByteBank\obj\Debug\net6.0\AluraByteBank.AssemblyInfo.cs
+D:\MatheusProjects\cursos\AluraByteBank\AluraByteBank\obj\Debug\net6.0\AluraByteBank.csproj.CoreCompileInputs.cache
+D:\MatheusProjects\cursos\AluraByteBank\AluraByteBank\obj\Debug\net6.0\AluraByteBank.dll
+D:\MatheusProjects\cursos\AluraByteBank\AluraByteBank\obj\Debug\net6.0\refint\AluraByteBank.dll
+D:\MatheusProjects\cursos\AluraByteBank\AluraByteBank\obj\Debug\net6.0\AluraByteBank.pdb
+D:\MatheusProjects\cursos\AluraByteBank\AluraByteBank\obj\Debug\net6.0\AluraByteBank.genruntimeconfig.cache
+D:\MatheusProjects\cursos\AluraByteBank\AluraByteBank\obj\Debug\net6.0\ref\AluraByteBank.dll
