@@ -28,7 +28,21 @@ namespace ConsoleApp
             contaCorrente1.numeroAgencia = 0440;
             contaCorrente1.nomeAgencia = "Agencia Central";
             contaCorrente1.saldo = 19.94;
+            contaCorrente1.ativo = true;
 
+            ContaCorrente contaCorrente2 = new ContaCorrente();
+
+            contaCorrente2.titular = "Bruno Garcia de Farias";
+            contaCorrente2.conta = "23132-2";
+            contaCorrente2.numeroAgencia = 2123;
+            contaCorrente2.nomeAgencia = "Agencia Leste";
+            contaCorrente2.ativo = false;
+
+
+            ///Alterando a referência da contaCorrente1 para contaCorrente 2
+            contaCorrente1 = contaCorrente2;
+
+            contaCorrente2.conta = "3333";
 
 
             Console.WriteLine("Titular: " + contaCorrente1.titular);
