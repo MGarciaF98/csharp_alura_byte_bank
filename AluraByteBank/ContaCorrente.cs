@@ -9,14 +9,14 @@ namespace bytebank
         public string NomeAgencia { get; set; }
 
         public int _numeroAgencia;
-        public int NumeroAgencia { 
+        public int NumeroAgencia {
             get
             {
                 return _numeroAgencia;
             }
             set
             {
-                if(value > 0)
+                if (value > 0)
                 {
                     _numeroAgencia = value;
                 }
@@ -33,7 +33,7 @@ namespace bytebank
             }
             set
             {
-                if(value < 0)
+                if (value < 0)
                 {
                     return;
                 }
@@ -78,10 +78,13 @@ namespace bytebank
                 return false;
         }
 
+        public static int TotalContasCorrentes { get;set ;}
+
         public ContaCorrente(int numeroAgencia, string conta)
         {
             NumeroAgencia = numeroAgencia;
             Conta = conta;
+            TotalContasCorrentes += 1;
         }
     }
 
