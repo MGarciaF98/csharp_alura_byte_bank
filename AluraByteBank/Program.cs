@@ -22,80 +22,76 @@ namespace ConsoleApp
         {
             Console.WriteLine("Hello, World!");
 
-            ContaCorrente contaCorrente1 = new ContaCorrente()
+            ContaCorrente ContaCorrente1 = new ContaCorrente(0440, "10123-4")
             {
-                titular = new Cliente()
+                Titular = new Cliente()
                 {
-                    nome = "Matheus Garcia de Farias",
-                    cpf = "444.444.444-23",
-                    profissao = "TI",
+                    Nome = "Matheus Garcia de Farias",
+                    Cpf = "444.444.444-23",
+                    Profissao = "TI",
                 },
-                conta = "10123-4",
-                numeroAgencia = 0440,
-                nomeAgencia = "Agencia Central",
-                saldo = 3219.94,
-                ativo = true,
+                NomeAgencia = "Agencia Central",
+                Ativo = true,
             };
 
-            ContaCorrente contaCorrente2 = new ContaCorrente()
+            ContaCorrente ContaCorrente2 = new ContaCorrente(2123, "23132-2")
             {
-                titular = new Cliente()
+                Titular = new Cliente()
                 {
-                    nome = "Bruno Garcia de Farias",
-                    cpf = "444.444.444-24",
-                    profissao = "TI",
+                    Nome = "Bruno Garcia de Farias",
+                    Cpf = "444.444.444-24",
+                    Profissao = "TI",
                 },
-                conta = "23132-2",
-                numeroAgencia = 2123,
-                nomeAgencia = "Agencia Leste",
-                saldo = 3999.00,
-                ativo = false,
+                NomeAgencia = "Agencia Leste",
+                Ativo = false,
             };
 
-            ContaCorrente contaCorrente3 = new ContaCorrente()
+            ContaCorrente ContaCorrente3 = new ContaCorrente(2125, "23132-4")
             {
-                titular = new Cliente()
+                Titular = new Cliente()
                 {
-                    nome = "Elisangela Garcia de Farias",
-                    cpf = "444.444.444-25",
-                    profissao = "Comerciante",
+                    Nome = "Elisangela Garcia de Farias",
+                    Cpf = "444.444.444-25",
+                    Profissao = "Comerciante",
                 },
-                conta = "23132-4",
-                numeroAgencia = 2125,
-                nomeAgencia = "Agencia Norte",
-                saldo = 3339.00,
-                ativo = true,
+                NomeAgencia = "Agencia Norte",
+                Ativo = true,
             };
 
-            ///Alterando a referência da contaCorrente1 para contaCorrente 2
-            contaCorrente2 = contaCorrente1;
+            ContaCorrente1.Depositar(3219.94);
+            ContaCorrente2.Depositar(599.00);
+            ContaCorrente3.Depositar(4339.00);
 
-            contaCorrente1.conta = "3333";
+            ///Alterando a referência da ContaCorrente1 para ContaCorrente 2
+            ContaCorrente2 = ContaCorrente1;
+
+            ContaCorrente1.Conta = "3333";
 
 
-            Console.WriteLine("Titular: " + contaCorrente1.titular.nome);
-            Console.WriteLine("Conta: " + contaCorrente1.conta);
-            Console.WriteLine("Número Agencia: " + contaCorrente1.numeroAgencia);
-            Console.WriteLine("Nome Agencia: " + contaCorrente1.nomeAgencia);
-            Console.WriteLine("Saldo: " + contaCorrente1.saldo);
+            Console.WriteLine("Titular: " + ContaCorrente1.Titular.Nome);
+            Console.WriteLine("Conta: " + ContaCorrente1.Conta);
+            Console.WriteLine("Número Agencia: " + ContaCorrente1.NumeroAgencia);
+            Console.WriteLine("Nome Agencia: " + ContaCorrente1.NomeAgencia);
+            Console.WriteLine("Saldo: " + ContaCorrente1.Saldo);
 
-            contaCorrente1.Sacar(100);
+            ContaCorrente1.Sacar(100);
 
-            Console.WriteLine("Saldo Conta 1: " + contaCorrente1.saldo);
+            Console.WriteLine("Saldo Conta 1: " + ContaCorrente1.Saldo);
 
-            contaCorrente1.Depositar(200);
+            ContaCorrente1.Depositar(200);
 
-            Console.WriteLine("Saldo Conta 1: " + contaCorrente1.saldo);
+            Console.WriteLine("Saldo Conta 1: " + ContaCorrente1.Saldo);
 
-            Console.WriteLine("Saldo Conta 3: " + contaCorrente3.saldo);
+            Console.WriteLine("Saldo Conta 3: " + ContaCorrente3.Saldo);
 
-            contaCorrente1.Transferir(200, contaCorrente3);
+            ContaCorrente1.Transferir(200, ContaCorrente3);
 
             Console.WriteLine("Transferindo 200 de 1 para 3");
 
-            Console.WriteLine("Saldo Conta 1: " + contaCorrente1.saldo);
+            Console.WriteLine("Saldo Conta 1: " + ContaCorrente1.Saldo);
 
-            Console.WriteLine("Saldo Conta 3: " + contaCorrente3.saldo);
+            Console.WriteLine("Saldo Conta 3: " + ContaCorrente3.Saldo);
+            Console.WriteLine("Saldo Conta 2: " + ContaCorrente2.Saldo);
 
 
 
