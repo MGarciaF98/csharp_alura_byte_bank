@@ -1,4 +1,5 @@
 ﻿using bytebank;
+using bytebank.Titular;
 
 /// Nas últimas atualizações do .NET, mais precisamente na versão 9 do C#, 
 /// foram introduzidos alguns recursos novos com o objetivo de aumentar a produtividade e reduzir o esforço de quem utiliza a linguagem.
@@ -21,33 +22,50 @@ namespace ConsoleApp
         {
             Console.WriteLine("Hello, World!");
 
-            ContaCorrente contaCorrente1 = new ContaCorrente();
+            ContaCorrente contaCorrente1 = new ContaCorrente()
+            {
+                titular = new Cliente()
+                {
+                    nome = "Matheus Garcia de Farias",
+                    cpf = "444.444.444-23",
+                    profissao = "TI",
+                },
+                conta = "10123-4",
+                numeroAgencia = 0440,
+                nomeAgencia = "Agencia Central",
+                saldo = 3219.94,
+                ativo = true,
+            };
 
-            contaCorrente1.titular = "Matheus Garcia de Farias";
-            contaCorrente1.conta = "10123-4";
-            contaCorrente1.numeroAgencia = 0440;
-            contaCorrente1.nomeAgencia = "Agencia Central";
-            contaCorrente1.saldo = 3219.94;
-            contaCorrente1.ativo = true;
+            ContaCorrente contaCorrente2 = new ContaCorrente()
+            {
+                titular = new Cliente()
+                {
+                    nome = "Bruno Garcia de Farias",
+                    cpf = "444.444.444-24",
+                    profissao = "TI",
+                },
+                conta = "23132-2",
+                numeroAgencia = 2123,
+                nomeAgencia = "Agencia Leste",
+                saldo = 3999.00,
+                ativo = false,
+            };
 
-            ContaCorrente contaCorrente2 = new ContaCorrente();
-
-            contaCorrente2.titular = "Bruno Garcia de Farias";
-            contaCorrente2.conta = "23132-2";
-            contaCorrente2.numeroAgencia = 2123;
-            contaCorrente2.nomeAgencia = "Agencia Leste";
-            contaCorrente2.saldo = 3999.00;
-            contaCorrente2.ativo = false;
-
-            ContaCorrente contaCorrente3 = new ContaCorrente();
-
-            contaCorrente3.titular = "Elisangela Garcia de Farias";
-            contaCorrente3.conta = "23132-2";
-            contaCorrente3.numeroAgencia = 2123;
-            contaCorrente3.nomeAgencia = "Agencia Leste";
-            contaCorrente3.saldo = 3999.00;
-            contaCorrente3.ativo = false;
-
+            ContaCorrente contaCorrente3 = new ContaCorrente()
+            {
+                titular = new Cliente()
+                {
+                    nome = "Elisangela Garcia de Farias",
+                    cpf = "444.444.444-25",
+                    profissao = "Comerciante",
+                },
+                conta = "23132-4",
+                numeroAgencia = 2125,
+                nomeAgencia = "Agencia Norte",
+                saldo = 3339.00,
+                ativo = true,
+            };
 
             ///Alterando a referência da contaCorrente1 para contaCorrente 2
             contaCorrente2 = contaCorrente1;
@@ -55,7 +73,7 @@ namespace ConsoleApp
             contaCorrente1.conta = "3333";
 
 
-            Console.WriteLine("Titular: " + contaCorrente1.titular);
+            Console.WriteLine("Titular: " + contaCorrente1.titular.nome);
             Console.WriteLine("Conta: " + contaCorrente1.conta);
             Console.WriteLine("Número Agencia: " + contaCorrente1.numeroAgencia);
             Console.WriteLine("Nome Agencia: " + contaCorrente1.nomeAgencia);
